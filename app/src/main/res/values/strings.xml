@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Wave</string>
+    <string name="app_name">AutoAccess</string>
     <string name="show_now">הראה עכשיו</string>
     <string name="waiting">ממתין למחווה</string>
     <string name="progress">%1$d מתוך %2$d מחוות</string>
