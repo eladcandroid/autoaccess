@@ -34,7 +34,7 @@ visual (a dial, big numbers, colour), because the driver cannot hear a confirmat
 - A gesture grammar state machine (`app/src/main/java/dev/accessauto/grammar`), pure Kotlin.
 - Drive screen and gesture training screen, portrait and landscape, Hebrew UI.
 - Result screens that show what each action did.
-- 30 unit tests, two of which replay real recorded head movement.
+- 31 unit tests, two of which replay real recorded head movement.
 
 ## Status
 

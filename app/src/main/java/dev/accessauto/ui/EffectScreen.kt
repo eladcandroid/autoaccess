@@ -56,6 +56,7 @@ fun EffectScreen(effect: Effect, modifier: Modifier = Modifier) {
             }
             is Effect.Navigation -> Navigation(effect)
             is Effect.Music -> Music(effect)
+            is Effect.MusicCommand -> Unit // resolved to Effect.Music before it reaches the screen
         }
     }
 }

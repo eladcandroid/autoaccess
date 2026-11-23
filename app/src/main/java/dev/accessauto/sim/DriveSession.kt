@@ -6,6 +6,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import dev.accessauto.grammar.DriveState
+import dev.accessauto.grammar.Effect
 import dev.accessauto.grammar.GestureMachine
 import dev.accessauto.vision.Gesture
 import dev.accessauto.vision.GestureEngine
@@ -26,6 +27,8 @@ class DriveSession(private val engine: GestureEngine) {
     private var lastHeadAt = engine.frames.value.headEventAt
     private var idleSince = SystemClock.uptimeMillis()
     private var next = 0
+    private val player = DemoPlayer()
+    private var playerResult: Effect.Music? = null
     private var loggedStable = Gesture.NONE
     private var loggedRaw = Gesture.NONE
     private var loggedState = ""
@@ -55,6 +58,11 @@ class DriveSession(private val engine: GestureEngine) {
                 now = machine.state
             }
         }
+        // A music command changes the pretend player once, when the action goes out.
+        val finished = now as? DriveState.Finished
+        val command = finished?.effect as? Effect.MusicCommand
+        if (command == null) playerResult = null
+        else now = finished.copy(effect = playerResult ?: player.apply(command.command).also { playerResult = it })
         state = now
         val summary = when (now) {
             DriveState.Idle -> "Idle"

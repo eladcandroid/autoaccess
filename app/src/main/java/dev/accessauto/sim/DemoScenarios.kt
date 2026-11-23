@@ -14,8 +14,8 @@ object DemoScenarios {
     private fun toDana(text: String, replyTo: String? = null) =
         Option(text, result = "נשלח לדנה: $text", effect = Effect.Message("דנה", text, replyTo))
 
-    private fun music(label: String, status: String, track: String, playing: Boolean) =
-        Option(label, result = "מוזיקה: $label", effect = Effect.Music(status, track, "רשימת הנסיעה שלי", playing))
+    private fun music(label: String, command: Effect.MusicCommand.Command) =
+        Option(label, result = "מוזיקה: $label", effect = Effect.MusicCommand(command))
 
     private val places = Prompt(
         "menu.navigate", "לאן לנווט?",
@@ -29,9 +29,9 @@ object DemoScenarios {
     private val musicMenu = Prompt(
         "menu.music", "מוזיקה",
         listOf(
-            music("נגן או עצור", "מושהה", "שיר לדרך", playing = false),
-            music("השיר הבא", "מתנגן עכשיו", "השיר הבא ברשימה", playing = true),
-            music("השיר הקודם", "מתנגן עכשיו", "השיר הקודם ברשימה", playing = true),
+            music("נגן או עצור", Effect.MusicCommand.Command.TOGGLE),
+            music("השיר הבא", Effect.MusicCommand.Command.NEXT),
+            music("השיר הקודם", Effect.MusicCommand.Command.PREVIOUS),
         ),
     )
 
@@ -75,6 +75,6 @@ object DemoScenarios {
         "navigation" to Effect.Navigation("מנווט הביתה", "18 דקות", "12 ק״מ"),
         "reroute" to Effect.Navigation("המסלול הוחלף", "11 דקות", "חוסך 7 דקות", rerouted = true),
         "call" to Effect.CallDeclined("אמא", "אני נוהג, כתבי לי"),
-        "music" to Effect.Music("מתנגן עכשיו", "השיר הבא ברשימה", "רשימת הנסיעה שלי", playing = true),
+        "music" to Effect.Music("מתנגן עכשיו", "שיר לדרך", "רשימת הנסיעה שלי", playing = true),
     )
 }

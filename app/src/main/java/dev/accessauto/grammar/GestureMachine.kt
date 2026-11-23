@@ -8,6 +8,10 @@ sealed interface Effect {
     data class Navigation(val title: String, val eta: String, val distance: String, val rerouted: Boolean = false) : Effect
     data class CallDeclined(val caller: String, val text: String? = null) : Effect
     data class Music(val status: String, val track: String, val artist: String, val playing: Boolean) : Effect
+    /** A player command; whoever owns the player turns it into the [Music] state that results. */
+    data class MusicCommand(val command: Command) : Effect {
+        enum class Command { TOGGLE, NEXT, PREVIOUS }
+    }
 }
 
 /** One choice in a prompt. Choosing it either opens [next] or finishes with [result] and [effect]. */
