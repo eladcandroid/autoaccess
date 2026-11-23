@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>AccessAuto C: Signs</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1280px;height:800px;overflow:hidden;padding:24px 36px;background:#FFC92E;color:#2A1245;font:400 14px/1.4 Rubik,sans-serif}
+header{display:flex;align-items:baseline;gap:22px;height:62px}
+h1{font:700 46px/1 Fredoka,sans-serif}
+header p{font-size:18px;font-weight:500}
+main{display:grid;grid-template-columns:736px 440px;gap:32px}
+.phones{display:flex;gap:16px;padding-top:6px}
+figure{width:172px}
+figure:nth-child(odd){transform:rotate(-1.6deg)}
+figure:nth-child(even){transform:rotate(1.4deg) translateY(8px)}
+figcaption{margin-top:12px;font-size:14px;font-weight:500;text-align:center}
+.phone{height:366px;border-radius:32px;border:6px solid #2A1245;box-shadow:7px 7px 0 #2A1245;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px 14px;text-align:center;background:#3046FF;color:#fff}
+.phone .g{width:112px}
+.phone b{font:600 32px/1.1 Fredoka,sans-serif}
+.phone small{font-size:14px}
+.choose{background:#fff;color:#2A1245;justify-content:flex-start;padding-top:20px;gap:8px}
+.bubble{background:#2A1245;color:#fff;border-radius:16px 16px 4px 16px;padding:8px 12px;font-size:14px;font-weight:500;align-self:stretch;text-align:start}
+.card{align-self:stretch;display:flex;align-items:center;gap:10px;border-radius:16px;padding:8px 10px;font:600 16px/1.2 Fredoka,sans-serif;text-align:start}
+.card span{flex:none;width:38px}
+.card:nth-of-type(2){background:#6FE3C1}.card:nth-of-type(3){background:#FFC92E}.card:nth-of-type(4){background:#FF9AA8}
+.sent{background:#6FE3C1;color:#2A1245}
+.sos{background:#FF5D73}
+.legend{margin-top:30px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.legend div{text-align:center;font-size:12.5px;line-height:1.3}
+.legend span{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 8px;border-radius:50%;background:#fff;border:4px solid #2A1245}
+.legend span svg{width:34px}
+.legend strong{display:block;font:600 14px/1.3 Fredoka,sans-serif}
+aside h2{font:600 15px/1 Fredoka,sans-serif;margin:0 0 8px}
+.car{height:238px;border-radius:16px;background:#2A1245;border:6px solid #17082B;display:flex;overflow:hidden;margin-bottom:20px;color:#fff}
+.rail{width:50px;background:#17082B;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px}
+.rail u{width:22px;height:22px;border-radius:50%;background:#4B2F70}
+.rail u:first-child{background:#FFC92E}
+.pane{flex:1;padding:12px 16px}
+.pane h3{font:600 15px/1.4 Fredoka,sans-serif;display:flex;justify-content:space-between}
+.pane h3 em{font-style:normal;color:#FFC92E}
+.pane p{font-size:13px;color:#CBBDE0;margin:2px 0 8px}
+.row{display:flex;align-items:center;gap:12px;height:44px;border-radius:22px;background:#3B2060;padding:0 6px;margin-bottom:6px;font:500 17px/1 Fredoka,sans-serif}
+.row span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;color:#2A1245}
+.row span svg{width:19px}
+.row:nth-of-type(1) span{background:#6FE3C1}.row:nth-of-type(2) span{background:#FFC92E}.row:nth-of-type(3) span{background:#FF9AA8}
+.train{height:272px;border-radius:28px;background:#fff;border:6px solid #2A1245;box-shadow:7px 7px 0 #2A1245;padding:18px 20px;display:grid;grid-template-columns:1fr 1fr;gap:6px 16px;align-content:start}
+.train b{grid-column:1/-1;font:600 28px/1.1 Fredoka,sans-serif}
+.pair{border-radius:18px;height:138px;display:grid;place-items:center;position:relative}
+.pair span{width:78px}
+.pair em{position:absolute;bottom:6px;font-style:normal;font-size:12px;font-weight:500}
+.want{background:#FFC92E}.got{background:#2A1245;color:#6FE3C1}.got em{color:#fff}
+.dots{grid-column:1/-1;display:flex;align-items:center;gap:8px;font-weight:500;margin-top:6px}
+.dots u{width:16px;height:16px;border-radius:50%;border:3px solid #2A1245}
+.dots u.on{background:#6FE3C1}
+</style>
+</head>
+<body>
+<header><h1>Signs</h1><p>הידיים שלך כבר יודעות לדבר. המסך עונה באותה שפה.</p></header>
+<main>
+  <div>
+    <section class="phones">
+      <figure><div class="phone"><span class="g" data-hand="open"></span><b>אני מקשיב</b><small>מה תרצה לעשות?</small></div><figcaption>מסך כחול: התעוררות</figcaption></figure>
+      <figure><div class="phone choose"><div class="bubble">דנה שואלת מתי תגיע</div><div class="card"><span data-hand="one"></span>עוד 10 דקות</div><div class="card"><span data-hand="two"></span>אני מאחר</div><div class="card"><span data-hand="three"></span>אכתוב כשאעצור</div></div><figcaption>מסך לבן: בחירת תשובה</figcaption></figure>
+      <figure><div class="phone sent"><span class="g" data-hand="thumb"></span><b>נשלח</b><small>עוד 10 דקות</small></div><figcaption>מסך ירוק: בוצע</figcaption></figure>
+      <figure><div class="phone sos"><span class="g" data-hand="fist"></span><b>חירום</b><small>המשך להחזיק שנייה.<br>המיקום יישלח לאמא.</small></div><figcaption>מסך אדום: חירום</figcaption></figure>
+    </section>
+    <section class="legend">
+      <div><span data-hand="open"></span><strong>כף יד פתוחה</strong>התעוררות</div>
+      <div><span data-hand="two"></span><strong>1, 2 או 3 אצבעות</strong>בחירה</div>
+      <div><span data-hand="thumb"></span><strong>אגודל למעלה</strong>אישור ושליחה</div>
+      <div><span data-hand="fist"></span><strong>אגרוף</strong>ביטול. 3 שניות: חירום</div>
+      <div><span data-face="nod"></span><strong>הנהון</strong>אישור בלי ידיים</div>
+    </section>
+  </div>
+  <aside>
+    <h2>מסך הרכב ב-Android Auto</h2>
+    <div class="car">
+      <div class="rail"><u></u><u></u><u></u></div>
+      <div class="pane">
+        <h3>AccessAuto <em>ממתין לבחירה</em></h3>
+        <p>דנה שואלת מתי תגיע</p>
+        <div class="row"><span data-hand="one"></span>עוד 10 דקות</div>
+        <div class="row"><span data-hand="two"></span>אני מאחר</div>
+        <div class="row"><span data-hand="three"></span>אכתוב כשאעצור</div>
+      </div>
+    </div>
+    <h2>אימון מחוות, לפני הנסיעה</h2>
+    <div class="train">
+      <b>עכשיו אתה: שתי אצבעות</b>
+      <div class="pair want"><span data-hand="two"></span><em>ככה</em></div>
+      <div class="pair got"><span data-skel></span><em>מה שהמצלמה רואה</em></div>
+      <div class="dots"><u class="on"></u><u class="on"></u><u class="on"></u><u class="on"></u><u></u><u></u>4 מתוך 6 מחוות</div>
+    </div>
+  </aside>
+</main>
+<script src="glyphs.js"></script>
+</body>
+</html>

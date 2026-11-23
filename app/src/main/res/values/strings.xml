@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wave</string>
+    <string name="show_now">הראה עכשיו</string>
+    <string name="waiting">ממתין למחווה</string>
+    <string name="progress">%1$d מתוך %2$d מחוות</string>
+    <string name="camera_needed">צריך גישה למצלמה כדי לזהות מחוות</string>
+    <string name="allow_camera">אפשר מצלמה</string>
+    <string name="g_open_palm">כף יד פתוחה</string>
+    <string name="g_one">אצבע אחת</string>
+    <string name="g_two">שתי אצבעות</string>
+    <string name="g_three">שלוש אצבעות</string>
+    <string name="g_thumb_up">אגודל למעלה</string>
+    <string name="g_fist">אגרוף</string>
+    <string name="g_nod">הנהון</string>
+    <string name="g_shake">ניעור ראש</string>
+    <string name="camera_sees">המצלמה רואה</string>
+    <string name="ready_title">כל המחוות זוהו</string>
+    <string name="ready">מוכן לנסיעה</string>
+    <string name="to_drive">למצב נהיגה</string>
+    <string name="to_training">לאימון</string>
+    <string name="idle_title">מוכן</string>
+    <string name="idle_hint">כף יד פתוחה פותחת תפריט. המצב הבא יופיע בעוד רגע.</string>
+    <string name="hint_pick">הראה 1, 2 או 3 אצבעות</string>
+    <string name="hint_confirm">מתבצע כשהעיגול נסגר. מספר אחר מחליף, אגרוף או ניעור ראש מבטלים.</string>
+    <string name="out_done">בוצע</string>
+    <string name="out_cancelled">בוטל</string>
+    <string name="out_timed_out">נסגר</string>
+    <string name="out_timed_out_detail">לא נבחרה תשובה בזמן</string>
+    <string name="out_sos">חירום נשלח</string>
+    <string name="out_sos_detail">המיקום נשלח לאיש הקשר לחירום</string>
+    <string name="sos_hold">חירום</string>
+    <string name="sos_hold_hint">המשך להחזיק אגרוף כדי לשלוח מיקום. שחרר לביטול.</string>
+    <string name="demo_note">הדגמה: שום דבר לא נשלח באמת</string>
+    <string name="demo_badge">הדגמה של הפעולה שבוצעה</string>
+    <string name="sent">נשלח</string>
+    <string name="call_declined">השיחה נדחתה</string>
+    <string name="eta_label">זמן נסיעה</string>
+</resources>

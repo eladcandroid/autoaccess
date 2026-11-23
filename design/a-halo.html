@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>AccessAuto A: Halo</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1280px;height:800px;overflow:hidden;padding:26px 36px;background:#0A1128;color:#DDE6FF;font:300 15px/1.45 Heebo,sans-serif}
+header{display:flex;align-items:baseline;gap:22px;height:60px}
+h1{font-weight:200;font-size:42px;letter-spacing:.04em;color:#fff}
+header p{color:#8C9AC4;font-size:18px}
+main{display:grid;grid-template-columns:736px 440px;gap:32px}
+.phones{display:flex;gap:16px}
+figure{width:172px}
+figcaption{margin-top:10px;font-size:14px;color:#8C9AC4;text-align:center}
+.phone{--c:#3D8BFF;height:372px;border-radius:30px;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px 16px;color:var(--c);text-align:center;
+  box-shadow:inset 0 0 0 3px var(--c),inset 0 0 46px 4px color-mix(in srgb,var(--c) 55%,transparent),0 0 46px -10px var(--c)}
+.phone .g{width:98px;filter:drop-shadow(0 0 14px var(--c))}
+.phone b{font-weight:200;font-size:32px;line-height:1.1;color:#fff}
+.phone small{font-size:14px;color:#B9C4E6}
+.choose{--c:#FFB020}.sent{--c:#2EE6A0}.sos{--c:#FF3B4E}
+.choose{justify-content:flex-start;padding-top:34px}
+.choose ol{list-style:none;width:100%;display:grid;gap:12px;margin-top:8px}
+.choose li{display:flex;align-items:center;gap:10px;color:#fff;font-size:18px;text-align:start}
+.choose i{flex:none;width:38px;height:38px;border-radius:50%;border:2px solid var(--c);color:var(--c);font-style:normal;font-weight:500;font-size:20px;display:grid;place-items:center;box-shadow:0 0 14px -2px var(--c)}
+.bar{width:100px;height:4px;border-radius:2px;background:#3a0d14;overflow:hidden}
+.bar span{display:block;width:66%;height:100%;background:var(--c)}
+.legend{margin-top:26px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;border-top:1px solid #1E2A52;padding-top:20px}
+.legend div{text-align:center;font-size:13px;color:#8C9AC4}
+.legend span{display:block;width:46px;margin:0 auto 8px;color:#DDE6FF}
+.legend strong{display:block;font-weight:500;color:#fff;font-size:14px}
+aside h2{font-weight:300;font-size:14px;color:#8C9AC4;margin:0 0 8px}
+.car{height:238px;border-radius:16px;background:#000;border:6px solid #1B2444;display:flex;overflow:hidden;margin-bottom:22px}
+.rail{width:50px;background:#0E1530;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px}
+.rail u{width:22px;height:22px;border-radius:50%;background:#26335F}
+.rail u:first-child{background:#FFB020}
+.pane{flex:1;padding:14px 16px;border-top:3px solid #FFB020}
+.pane h3{font-weight:500;font-size:15px;color:#fff;display:flex;justify-content:space-between}
+.pane h3 em{font-style:normal;font-weight:300;color:#FFB020}
+.pane p{font-size:14px;color:#B9C4E6;margin:4px 0 10px}
+.row{display:flex;align-items:center;gap:12px;height:42px;border-radius:10px;background:#111936;padding:0 12px;margin-bottom:7px;color:#fff;font-size:17px}
+.row i{font-style:normal;font-weight:500;color:#FFB020;font-size:20px;width:16px}
+.train{height:270px;border-radius:22px;background:#000;border:1px solid #1E2A52;display:flex;overflow:hidden}
+.cam{width:190px;background:radial-gradient(circle at 50% 40%,#22305E,#0B1026);display:grid;place-items:center;color:#2EE6A0}
+.cam span{width:120px;filter:drop-shadow(0 0 8px #2EE6A0)}
+.do{flex:1;padding:26px 22px;display:flex;flex-direction:column;gap:10px}
+.do b{font-weight:200;font-size:30px;line-height:1.15;color:#fff}
+.do .t{width:40px;color:#3D8BFF}
+.pips{display:flex;gap:8px;margin-top:auto}
+.pips u{width:26px;height:5px;border-radius:3px;background:#1E2A52}
+.pips u.on{background:#2EE6A0}
+</style>
+</head>
+<body>
+<header><h1>Halo</h1><p>האור אומר לך מה קורה. לא צריך לקרוא, לא צריך לשמוע.</p></header>
+<main>
+  <div>
+    <section class="phones">
+      <figure><div class="phone"><span class="g" data-hand="open"></span><b>מקשיב</b><small>הראה מחווה</small></div><figcaption>כחול: התעוררות</figcaption></figure>
+      <figure><div class="phone choose"><small>דנה שואלת מתי תגיע</small><ol><li><i>1</i>עוד 10 דקות</li><li><i>2</i>אני מאחר</li><li><i>3</i>אכתוב כשאעצור</li></ol></div><figcaption>ענבר: בחירת תשובה</figcaption></figure>
+      <figure><div class="phone sent"><span class="g" data-hand="thumb"></span><b>נשלח</b><small>עוד 10 דקות</small></div><figcaption>ירוק: בוצע</figcaption></figure>
+      <figure><div class="phone sos"><span class="g" data-hand="fist"></span><b>חירום</b><div class="bar"><span></span></div><small>המשך להחזיק שנייה.<br>המיקום יישלח לאמא.</small></div><figcaption>אדום: חירום</figcaption></figure>
+    </section>
+    <section class="legend">
+      <div><span data-hand="open"></span><strong>כף יד פתוחה</strong>התעוררות</div>
+      <div><span data-hand="two"></span><strong>1, 2 או 3 אצבעות</strong>בחירה</div>
+      <div><span data-hand="thumb"></span><strong>אגודל למעלה</strong>אישור ושליחה</div>
+      <div><span data-hand="fist"></span><strong>אגרוף</strong>ביטול. 3 שניות: חירום</div>
+      <div><span data-face="nod"></span><strong>הנהון</strong>אישור בלי ידיים</div>
+    </section>
+  </div>
+  <aside>
+    <h2>מסך הרכב ב-Android Auto</h2>
+    <div class="car">
+      <div class="rail"><u></u><u></u><u></u></div>
+      <div class="pane">
+        <h3>AccessAuto <em>ממתין לבחירה</em></h3>
+        <p>דנה שואלת מתי תגיע</p>
+        <div class="row"><i>1</i>עוד 10 דקות</div>
+        <div class="row"><i>2</i>אני מאחר</div>
+        <div class="row"><i>3</i>אכתוב כשאעצור</div>
+      </div>
+    </div>
+    <h2>אימון מחוות, לפני הנסיעה</h2>
+    <div class="train">
+      <div class="cam"><span data-skel></span></div>
+      <div class="do"><span class="t" data-hand="two"></span><b>הראה שתי אצבעות</b><small>זוהה. החזק עוד רגע.</small><div class="pips"><u class="on"></u><u class="on"></u><u class="on"></u><u class="on"></u><u></u><u></u></div><small>4 מתוך 6 מחוות</small></div>
+    </div>
+  </aside>
+</main>
+<script src="glyphs.js"></script>
+</body>
+</html>

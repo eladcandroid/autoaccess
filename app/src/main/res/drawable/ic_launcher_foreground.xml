@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <!-- Instrument dial: grey sweep with the orange needle arc part-way round. -->
+    <path android:pathData="M26.29,70A32,32 0 1 1 81.71,70" android:strokeColor="#4A5158" android:strokeWidth="4" android:strokeLineCap="round" />
+    <path android:pathData="M26.29,70A32,32 0 0 1 70,26.29" android:strokeColor="#F25C05" android:strokeWidth="4" android:strokeLineCap="round" />
+    <!-- Open palm, the wake gesture. -->
+    <group android:translateX="35" android:translateY="33" android:scaleX="0.38" android:scaleY="0.38">
+        <path android:fillColor="#F4F6F5" android:pathData="M36,60h28a18,18 0 0 1 18,18v14a18,18 0 0 1 -18,18h-28a18,18 0 0 1 -18,-18v-14a18,18 0 0 1 18,-18zM26,18h0a6,6 0 0 1 6,6v48a6,6 0 0 1 -6,6h-0a6,6 0 0 1 -6,-6v-48a6,6 0 0 1 6,-6zM40,10h0a6,6 0 0 1 6,6v56a6,6 0 0 1 -6,6h-0a6,6 0 0 1 -6,-6v-56a6,6 0 0 1 6,-6zM54,18h0a6,6 0 0 1 6,6v48a6,6 0 0 1 -6,6h-0a6,6 0 0 1 -6,-6v-48a6,6 0 0 1 6,-6zM68,30h0a6,6 0 0 1 6,6v36a6,6 0 0 1 -6,6h-0a6,6 0 0 1 -6,-6v-36a6,6 0 0 1 6,-6z" />
+        <group android:pivotX="20.5" android:pivotY="92" android:rotation="-32">
+            <path android:fillColor="#F4F6F5" android:pathData="M20.5,50h0.0a6.5,6.5 0 0 1 6.5,6.5v33.0a6.5,6.5 0 0 1 -6.5,6.5h-0.0a6.5,6.5 0 0 1 -6.5,-6.5v-33.0a6.5,6.5 0 0 1 6.5,-6.5z" />
+        </group>
+    </group>
+</vector>
