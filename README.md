@@ -17,7 +17,7 @@ to read hand and head gestures instead.
 | Open palm | Opens the menu (navigation, message, music) |
 | 1, 2 or 3 fingers | Picks an option. A ring closes around it in 1.4 s, then it is carried out |
 | Another number while the ring runs | Changes the pick |
-| Fist, or a head shake | Cancels |
+| Fist held for 1.2 s (a red ring fills), or a head shake | Cancels |
 | Thumb up, or a nod | Optional shortcut: carry out the pick at once |
 | Fist held for 3 seconds | Emergency alert, from any screen |
 
@@ -34,7 +34,7 @@ visual (a dial, big numbers, colour), because the driver cannot hear a confirmat
 - A gesture grammar state machine (`app/src/main/java/dev/accessauto/grammar`), pure Kotlin.
 - Drive screen and gesture training screen, portrait and landscape, Hebrew UI.
 - Result screens that show what each action did.
-- 27 unit tests, two of which replay real recorded head movement.
+- 30 unit tests, two of which replay real recorded head movement.
 
 ## Status
 

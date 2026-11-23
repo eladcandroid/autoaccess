@@ -82,10 +82,27 @@ class GestureMachineTest {
         assertEquals(listOf(Outcome.CANCELLED), reports.map { it.outcome })
     }
 
-    @Test fun fistCancelsDuringTheCountdownOnceClearlyHeld() {
+    @Test fun fistCancelsOnlyAfterItsRingFills() {
         m.present(message, t); hold(Gesture.ONE)
-        assertTrue(hold(Gesture.FIST, 400) is DriveState.Asking)
-        assertEquals(DriveState.Finished(Outcome.CANCELLED, ""), hold(Gesture.FIST, 300))
+        val filling = hold(Gesture.FIST, 700) as DriveState.Asking
+        assertTrue(filling.cancel > 0.4f && filling.cancel < 0.7f)
+        assertEquals(DriveState.Finished(Outcome.CANCELLED, ""), hold(Gesture.FIST, 600))
+    }
+
+    @Test fun fistPausesThePickAndReleasingItResumes() {
+        m.present(message, t); hold(Gesture.ONE, 1_500)
+        // Without the pause the pick would go out 500 ms into this fist.
+        assertTrue(hold(Gesture.FIST, 1_000) is DriveState.Asking)
+        val released = hold(Gesture.NONE, 100) as DriveState.Asking
+        assertEquals(0f, released.cancel)
+        assertEquals(DriveState.Finished(Outcome.DONE, "10 min"), hold(Gesture.NONE, 500))
+    }
+
+    @Test fun fistThatCancelledDoesNotGoOnToSendAnAlert() {
+        m.present(message, t)
+        assertEquals(DriveState.Finished(Outcome.CANCELLED, ""), hold(Gesture.FIST, 1_300))
+        hold(Gesture.FIST, 5_000)
+        assertEquals(listOf(Outcome.CANCELLED), reports.map { it.outcome })
     }
 
     @Test fun promptClosesByItself() {

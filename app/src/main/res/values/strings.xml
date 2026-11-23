@@ -22,7 +22,7 @@
     <string name="idle_title">מוכן</string>
     <string name="idle_hint">כף יד פתוחה פותחת תפריט. המצב הבא יופיע בעוד רגע.</string>
     <string name="hint_pick">הראה 1, 2 או 3 אצבעות</string>
-    <string name="hint_confirm">מתבצע כשהעיגול נסגר. מספר אחר מחליף, אגרוף או ניעור ראש מבטלים.</string>
+    <string name="hint_confirm">מתבצע כשהעיגול נסגר. מספר אחר מחליף. אגרוף מוחזק או ניעור ראש מבטלים.</string>
     <string name="out_done">בוצע</string>
     <string name="out_cancelled">בוטל</string>
     <string name="out_timed_out">נסגר</string>
@@ -36,4 +36,5 @@
     <string name="sent">נשלח</string>
     <string name="call_declined">השיחה נדחתה</string>
     <string name="eta_label">זמן נסיעה</string>
+    <string name="cancel_hold">מבטל. שחרר את האגרוף כדי להמשיך</string>
 </resources>

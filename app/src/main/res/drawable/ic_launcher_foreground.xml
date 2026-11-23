@@ -1,12 +1,11 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
-    <!-- Instrument dial: grey sweep with the orange needle arc part-way round. -->
-    <path android:pathData="M26.29,70A32,32 0 1 1 81.71,70" android:strokeColor="#4A5158" android:strokeWidth="4" android:strokeLineCap="round" />
-    <path android:pathData="M26.29,70A32,32 0 0 1 70,26.29" android:strokeColor="#F25C05" android:strokeWidth="4" android:strokeLineCap="round" />
-    <!-- Open palm, the wake gesture. -->
-    <group android:translateX="35" android:translateY="33" android:scaleX="0.38" android:scaleY="0.38">
-        <path android:fillColor="#F4F6F5" android:pathData="M36,60h28a18,18 0 0 1 18,18v14a18,18 0 0 1 -18,18h-28a18,18 0 0 1 -18,-18v-14a18,18 0 0 1 18,-18zM26,18h0a6,6 0 0 1 6,6v48a6,6 0 0 1 -6,6h-0a6,6 0 0 1 -6,-6v-48a6,6 0 0 1 6,-6zM40,10h0a6,6 0 0 1 6,6v56a6,6 0 0 1 -6,6h-0a6,6 0 0 1 -6,-6v-56a6,6 0 0 1 6,-6zM54,18h0a6,6 0 0 1 6,6v48a6,6 0 0 1 -6,6h-0a6,6 0 0 1 -6,-6v-48a6,6 0 0 1 6,-6zM68,30h0a6,6 0 0 1 6,6v36a6,6 0 0 1 -6,6h-0a6,6 0 0 1 -6,-6v-36a6,6 0 0 1 6,-6z" />
-        <group android:pivotX="20.5" android:pivotY="92" android:rotation="-32">
-            <path android:fillColor="#F4F6F5" android:pathData="M20.5,50h0.0a6.5,6.5 0 0 1 6.5,6.5v33.0a6.5,6.5 0 0 1 -6.5,6.5h-0.0a6.5,6.5 0 0 1 -6.5,-6.5v-33.0a6.5,6.5 0 0 1 6.5,-6.5z" />
-        </group>
+    <group android:translateX="14.4" android:translateY="14.4" android:scaleX="1.1" android:scaleY="1.1">
+        <!-- Steering wheel. -->
+        <path android:pathData="M36,11a25,25 0 1 1 0,50a25,25 0 1 1 0,-50" android:strokeColor="#F4F6F5" android:strokeWidth="5.5" />
+        <path android:pathData="M12,37h14M46,37h14M36,50v11" android:strokeColor="#F4F6F5" android:strokeWidth="5.5" android:strokeLineCap="round" />
+        <!-- Accessibility figure as the hub. -->
+        <path android:pathData="M36,25a13,13 0 1 1 0,26a13,13 0 1 1 0,-26" android:fillColor="#F25C05" />
+        <path android:pathData="M36,27.9a2.6,2.6 0 1 1 0,5.2a2.6,2.6 0 1 1 0,-5.2" android:fillColor="#F4F6F5" />
+        <path android:pathData="M28,35.5H44M36,35.5V41M36,41L32,48M36,41L40,48" android:strokeColor="#F4F6F5" android:strokeWidth="2.6" android:strokeLineCap="round" android:strokeLineJoin="round" />
     </group>
 </vector>

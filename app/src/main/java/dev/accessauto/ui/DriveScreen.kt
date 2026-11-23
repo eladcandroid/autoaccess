@@ -108,10 +108,17 @@ private fun Headline(progress: Float, needle: Color, title: String, titleColor: 
 
 @Composable
 private fun Asking(state: DriveState.Asking, wide: Boolean) {
+    val cancelling = state.cancel > 0f
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
-        // The needle falls as the time to answer runs out.
-        Gauge(state.timeLeft, Cockpit.Needle, Modifier.size(64.dp))
-        Text(state.prompt.title, style = Cockpit.Label.copy(fontSize = 22.sp, lineHeight = 28.sp))
+        if (cancelling) {
+            // A held fist fills this ring; when it closes the prompt is cancelled.
+            Ring(state.cancel, Cockpit.Danger, Cockpit.Aluminium, Modifier.size(64.dp))
+            Text(stringResource(R.string.cancel_hold), style = Cockpit.Label.copy(fontSize = 22.sp, lineHeight = 28.sp, color = Cockpit.Danger))
+        } else {
+            // The needle falls as the time to answer runs out.
+            Gauge(state.timeLeft, Cockpit.Needle, Modifier.size(64.dp))
+            Text(state.prompt.title, style = Cockpit.Label.copy(fontSize = 22.sp, lineHeight = 28.sp))
+        }
     }
     if (wide) {
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -121,6 +128,18 @@ private fun Asking(state: DriveState.Asking, wide: Boolean) {
         state.prompt.options.forEachIndexed { i, _ -> Tile(state.prompt, i, state.selected == i, state.commit, stacked = false, Modifier.fillMaxWidth()) }
     }
     Text(stringResource(if (state.selected == null) R.string.hint_pick else R.string.hint_confirm), style = Cockpit.Body)
+}
+
+/** A ring that closes clockwise from the top as [progress] goes 0..1. */
+@Composable
+private fun Ring(progress: Float, color: Color, track: Color, modifier: Modifier) {
+    Canvas(modifier) {
+        val stroke = size.minDimension * 0.12f
+        val inset = Offset(stroke / 2, stroke / 2)
+        val ring = Size(size.width - stroke, size.height - stroke)
+        drawArc(track, 0f, 360f, false, inset, ring, style = Stroke(stroke))
+        drawArc(color, -90f, 360f * progress.coerceIn(0f, 1f), false, inset, ring, style = Stroke(stroke, cap = StrokeCap.Round))
+    }
 }
 
 /**
